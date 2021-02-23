@@ -1,5 +1,12 @@
 <template>
   <div>
+    <panel :padding="15" class="container">
+      <div slot="title">{{$t('m.About')}}</div>
+      <div class="content">
+
+      </div>
+    </panel>
+
     <panel class="container">
       <div slot="title">{{$t('m.Compiler')}} & {{$t('m.Judger')}}</div>
       <div class="content markdown-body">

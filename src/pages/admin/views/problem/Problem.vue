@@ -194,6 +194,11 @@
               </el-radio-group>
             </el-form-item>
           </el-col>
+          <el-col :span="4">
+            <el-form-item :label="$t('m.Problem_Point')" required>
+              <el-input type="Number" :placeholder="$t('m.Problem_Point')" v-model="problem.total_score"></el-input>
+            </el-form-item>
+          </el-col>
           <el-col :span="6">
             <el-form-item :label="$t('m.TestCase')" :error="error.testcase">
               <el-upload
@@ -346,6 +351,7 @@
           rule_type: 'ACM',
           hint: '',
           source: '',
+          total_score: 100,
           io_mode: {'io_mode': 'Standard IO', 'input': 'input.txt', 'output': 'output.txt'}
         }
         let contestID = this.$route.params.contestId

@@ -155,6 +155,12 @@
             render: (h, params) => {
               return h('span', this.getACRate(params.row.accepted_number, params.row.submission_number))
             }
+          },
+          {
+            title: this.$i18n.t('m.Problem_Point'),
+            render: (h, params) => {
+              return h('span', this.getProblemPoint(params.row.accepted_number, params.row.total_score))
+            }
           }
         ],
         problemList: [],
