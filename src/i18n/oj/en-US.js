@@ -201,7 +201,7 @@ export const m = {
   Reset: 'Reset',
   Pick_One: 'Pick one',
   Difficulty: 'Difficulty',
-  Total: 'Total',
+  Total: 'Total Submission',
   AC_Rate: 'AC Rate',
   // Register.vue
   RegisterUsername: 'Username',

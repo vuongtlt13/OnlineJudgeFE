@@ -160,7 +160,7 @@
             <p>{{$t('m.' + problem.difficulty)}}</p></li>
           <li v-if="problem.total_score">
             <p>{{$t('m.Score')}}</p>
-            <p>{{problem.total_score}}</p>
+            <p>{{this.getProblemPoint(problem.unique_accepted_number, problem.total_score)}}</p>
           </li>
           <li>
             <p>{{$t('m.Tags')}}</p>
@@ -208,6 +208,7 @@
   import {JUDGE_STATUS, CONTEST_STATUS, buildProblemCodeKey} from '@/utils/constants'
   import api from '@oj/api'
   import {pie, largePie} from './chartData'
+  import utils from "@/utils/utils";
 
   // 只显示这些状态的图形占用
   const filtedStatus = ['-1', '-2', '0', '1', '2', '3', '4', '8']
@@ -277,6 +278,9 @@
     },
     methods: {
       ...mapActions(['changeDomTitle']),
+      getProblemPoint(ACCount, TotalScore) {
+        return utils.getProblemPoint(ACCount, TotalScore);
+      },
       init () {
         this.$Loading.start()
         this.contestID = this.$route.params.contestID

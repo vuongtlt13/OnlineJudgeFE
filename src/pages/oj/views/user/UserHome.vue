@@ -25,7 +25,7 @@
           </div>
           <div class="right">
             <p>{{$t('m.UserHomeScore')}}</p>
-            <p class="emphasis">{{profile.total_score}}</p>
+            <p class="emphasis">{{profile.final_total_score}}</p>
           </div>
         </div>
         <div id="problems">

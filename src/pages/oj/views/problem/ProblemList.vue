@@ -159,7 +159,7 @@
           {
             title: this.$i18n.t('m.Problem_Point'),
             render: (h, params) => {
-              return h('span', this.getProblemPoint(params.row.accepted_number, params.row.total_score))
+              return h('span', this.getProblemPoint(params.row.unique_accepted_number, params.row.total_score))
             }
           }
         ],

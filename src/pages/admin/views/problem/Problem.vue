@@ -309,7 +309,7 @@
         template: {},
         title: '',
         spjMode: '',
-        disableRuleType: false,
+        disableRuleType: true,
         routeName: '',
         error: {
           tags: '',
