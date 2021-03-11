@@ -84,7 +84,7 @@
         <el-button type="primary" size="small"
                    @click="goCreateProblem" icon="el-icon-plus">Create
         </el-button>
-        <el-button v-if="contestId" type="primary"
+        <el-button v-if="isShowImport" type="primary"
                    size="small" icon="el-icon-plus"
                    @click="addProblemDialogVisible = true">Add From Public Problem
         </el-button>
@@ -140,6 +140,7 @@
         currentPage: 1,
         routeName: '',
         contestId: '',
+        contestType: '',
         // for make public use
         currentProblemID: '',
         currentRow: {},
@@ -148,9 +149,15 @@
         addProblemDialogVisible: false
       }
     },
+    computed: {
+      isShowImport: function () {
+        return this.contestId && this.contestType !== "OI";
+      }
+    },
     mounted () {
       this.routeName = this.$route.name
       this.contestId = this.$route.params.contestId
+      this.contestType = this.$route.params.contestType
       this.getProblemList(this.currentPage)
     },
     methods: {

@@ -90,7 +90,7 @@ export default new VueRouter({
           component: Announcement
         },
         {
-          path: '/contest/:contestId/problems',
+          path: '/contest/:contestId/:contestType/problems',
           name: 'contest-problem-list',
           component: ProblemList
         },

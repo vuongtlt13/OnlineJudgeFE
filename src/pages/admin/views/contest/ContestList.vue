@@ -74,7 +74,7 @@
           label="Operation">
           <div slot-scope="scope">
             <icon-btn name="Edit" icon="edit" @click.native="goEdit(scope.row.id)"></icon-btn>
-            <icon-btn name="Problem" icon="list-ol" @click.native="goContestProblemList(scope.row.id)"></icon-btn>
+            <icon-btn name="Problem" icon="list-ol" @click.native="goContestProblemList(scope.row.id, scope.row.rule_type)"></icon-btn>
             <icon-btn name="Announcement" icon="info-circle"
                       @click.native="goContestAnnouncement(scope.row.id)"></icon-btn>
             <icon-btn icon="download" name="Download Accepted Submissions"
@@ -162,8 +162,8 @@
       goContestAnnouncement (contestId) {
         this.$router.push({name: 'contest-announcement', params: {contestId}})
       },
-      goContestProblemList (contestId) {
-        this.$router.push({name: 'contest-problem-list', params: {contestId}})
+      goContestProblemList (contestId, contestType) {
+        this.$router.push({name: 'contest-problem-list', params: {contestId, contestType}})
       },
       handleVisibleSwitch (row) {
         api.editContest(row)
