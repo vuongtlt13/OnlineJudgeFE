@@ -1,8 +1,11 @@
 <template>
-  <Panel shadow :padding-bottom="10">
+  <Panel shadow :padding-bottom="10" style="border-radius: 10px">
     <template v-slot:title>
       <div class="text-center" style="width: 100%">
         <span style="font-size: small">Rủ bạn bè vào cày rank thôi nào!</span>
+      </div>
+      <div class="text-center" style="width: 100%">
+        <Icon color="#fdee2d" style="font-size: medium" type="ios-star" /><Icon color="#fdee2d" type="ios-star" /><Icon color="#fdee2d" style="font-size: medium" type="ios-star" />
       </div>
     </template>
     <h1 style="width: 100%" class="text-center">{{dayInWeek}}</h1>

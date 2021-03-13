@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-    <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
+    <Menu style="background-color: #741456" theme="dark" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
       <div class="logo"><span> <a href="/"> {{website.website_name}}</a></span></div>
       <Menu-item name="/">
         <Icon type="home"></Icon>
@@ -19,6 +19,7 @@
         {{$t('m.NavStatus')}}
       </Menu-item>
       <Menu-item name="/rank">
+        <Icon type="ios-podium" />
         {{$t('m.Rank')}}
       </Menu-item>
       <Menu-item name="/about">
@@ -29,13 +30,16 @@
           <Button type="ghost"
                   ref="loginBtn"
                   shape="circle"
+                  class="mycustomer-btn"
+                  style="color: white; font-size: 16px; border: 0;"
                   @click="handleBtnClick('login')">{{$t('m.Login')}}
           </Button>
           <Button v-if="website.allow_register"
                   type="ghost"
                   shape="circle"
+                  class="mycustomer-btn"
                   @click="handleBtnClick('register')"
-                  style="margin-left: 5px;">{{$t('m.Register')}}
+                  style="margin-left: 5px;color: white; font-size: 16px; border: 0">{{$t('m.Register')}}
           </Button>
         </div>
       </template>
@@ -120,10 +124,12 @@
     z-index: 1000;
     background-color: #fff;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
-    .oj-menu {
-      background: #fdfdfd;
+    //.oj-menu {
+    //  background: #fdfdfd;
+    //}
+    button.mycustomer-btn:hover {
+      color: #2b85e4 !important;
     }
-
     .logo {
       margin-left: 2%;
       margin-right: 2%;
@@ -142,7 +148,7 @@
       }
     }
     .btn-menu {
-      font-size: 16px;
+      font-size: 20px;
       float: right;
       margin-right: 10px;
     }

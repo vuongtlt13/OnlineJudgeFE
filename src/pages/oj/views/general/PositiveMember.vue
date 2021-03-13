@@ -1,5 +1,5 @@
 <template>
-  <Panel shadow :padding="10">
+  <Panel shadow :padding="10" style="border-radius: 10px">
     <div slot="title">
       {{ title }}
     </div>

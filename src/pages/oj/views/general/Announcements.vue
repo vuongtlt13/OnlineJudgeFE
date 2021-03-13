@@ -1,5 +1,5 @@
 <template>
-  <Panel shadow :padding="10">
+  <Panel shadow :padding="10" class="my-border">
     <div slot="title">
       {{title}}
     </div>
@@ -112,6 +112,9 @@
 </script>
 
 <style scoped lang="less">
+  .my-border {
+    border-radius: 10px;
+  }
   .announcements-container {
     margin-top: -10px;
     margin-bottom: 10px;
